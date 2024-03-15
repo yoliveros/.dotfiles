@@ -1,0 +1,9 @@
+[user]
+	name = yoliveros
+	email = 28690224+yoliveros@users.noreply.github.com
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[init]
+	defaultBranch = main
