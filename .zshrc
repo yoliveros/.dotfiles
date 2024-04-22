@@ -46,3 +46,14 @@ export NVM_DIR="$HOME/.nvm"
 # bun completions
 [ -s "/home/yoliveros/.bun/_bun" ] && source "/home/yoliveros/.bun/_bun"
 
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+#snap 
+export PATH="$PATH:/snap/bin"
+
+#zls
+export PATH="$PATH:$HOME/.config/zls/zig-out/bin"
+
+#zigup
+export PATH="$PATH:$HOME/.config/zigup/zig-out/bin"
