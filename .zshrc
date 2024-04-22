@@ -24,7 +24,6 @@ fi
 alias vim='nvim'
 alias l='exa -l --icons'
 alias ll='exa -l -a --icons'
-eval "$(starship init zsh)"
 
 # bash way
 bindkey -s '\C-f' 'tmux-sessionizer\n'
