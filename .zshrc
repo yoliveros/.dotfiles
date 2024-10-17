@@ -22,8 +22,8 @@ fi
 
 # Custom settings
 alias vim='nvim'
-alias l='exa -l --icons'
-alias ll='exa -l -a --icons'
+alias l='eza -l --icons'
+alias ll='eza -l -a --icons'
 eval "$(starship init zsh)"
 
 # bash way
@@ -36,7 +36,6 @@ export PATH=$PATH:/usr/local/go/bin
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
-. "$HOME/.cargo/env"
 
 #nvm
 export NVM_DIR="$HOME/.nvm"
