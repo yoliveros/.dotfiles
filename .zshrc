@@ -50,3 +50,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PATH="$PATH:/snap/bin"
 
 eval "$(starship init zsh)"
+
+export PATH="$PATH:/home/yoliveros/.dotnet/tools"
+
+export DOTNET_ROOT="/home/linuxbrew/.linuxbrew/opt/dotnet/libexec"
