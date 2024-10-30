@@ -24,7 +24,6 @@ fi
 alias vim='nvim'
 alias l='eza -l --icons'
 alias ll='eza -l -a --icons'
-eval "$(starship init zsh)"
 
 # bash way
 bindkey -s '\C-f' 'tmux-sessionizer\n'
@@ -49,3 +48,5 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 #snap 
 export PATH="$PATH:/snap/bin"
+
+eval "$(starship init zsh)"
