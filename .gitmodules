@@ -1,4 +1,0 @@
-[submodule ".config/nvim"]
-  branch = main
-	path = .config/nvim
-  curl = git@github.com:yoliveros/nvim-setup.git 
