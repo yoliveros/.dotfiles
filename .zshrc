@@ -38,8 +38,8 @@ export PATH=$BUN_INSTALL/bin:$PATH
 
 #nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # bun completions
 [ -s "/home/yoliveros/.bun/_bun" ] && source "/home/yoliveros/.bun/_bun"
@@ -54,3 +54,16 @@ eval "$(starship init zsh)"
 export PATH="$PATH:/home/yoliveros/.dotnet/tools"
 
 export DOTNET_ROOT="/home/linuxbrew/.linuxbrew/opt/dotnet/libexec"
+
+# pnpm
+export PNPM_HOME="/home/yoliveros/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# C includes
+export CPATH="$CPATH:/home/linuxbrew/.linuxbrew/include"
+export LIBRARY_PATH="$LIBRARY_PATH:/home/linuxbrew/.linuxbrew/lib"
+#
