@@ -20,6 +20,8 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 # Custom settings
 alias vim='nvim'
 alias l='eza -l --icons'
@@ -44,7 +46,6 @@ export NVM_DIR="$HOME/.nvm"
 # bun completions
 [ -s "/home/yoliveros/.bun/_bun" ] && source "/home/yoliveros/.bun/_bun"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 #snap 
 export PATH="$PATH:/snap/bin"
@@ -53,8 +54,6 @@ eval "$(starship init zsh)"
 
 export PATH="$PATH:/home/yoliveros/.dotnet/tools"
 
-export DOTNET_ROOT="/home/linuxbrew/.linuxbrew/opt/dotnet/libexec"
-
 # pnpm
 export PNPM_HOME="/home/yoliveros/.local/share/pnpm"
 case ":$PATH:" in
@@ -62,8 +61,3 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-# C includes
-export CPATH="$CPATH:/home/linuxbrew/.linuxbrew/include"
-export LIBRARY_PATH="$LIBRARY_PATH:/home/linuxbrew/.linuxbrew/lib"
-#
