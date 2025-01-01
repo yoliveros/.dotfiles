@@ -1,7 +1,7 @@
 
 
-Brew:  
-  bat  
+## Brew:  
+  >bat  
   bear  
   eza  
   fzf  
@@ -9,7 +9,8 @@ Brew:
   go  
   htop  
   neovim  
-  nvm  
+  nvm
+  meson
   pnpm  
   starship  
   stow  
