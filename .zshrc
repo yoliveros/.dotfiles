@@ -24,12 +24,15 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Custom settings
 alias vim='nvim'
-alias l='eza -l --icons'
-alias ll='eza -l -a --icons'
+alias l='eza -l --icons --color --no-user'
+alias ll='eza -l -a --icons --color --no-user'
 
 # bash way
 bindkey -s '\C-f' 'tmux-sessionizer\n'
 # End of custom settings
+
+# source /home/linuxbrew/.linuxbrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # golang
 export PATH=$PATH:/usr/local/go/bin
@@ -61,3 +64,12 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# dotnet
+export DOTNET_ROOT="/home/linuxbrew/.linuxbrew/opt/dotnet/libexec"
+
+# android studio
+export PATH="$PATH:/opt/android-studio/bin"
+export JAVA_HOME="/opt/android-studio/jbr"
+export ANDROID_HOME="$HOME/Android/Sdk"
+export NDK_HOME="$ANDROID_HOME/ndk/28.0.12433566"
