@@ -1,12 +1,13 @@
 
-
 ## Brew:  
   - bat  
   - bear  
+  - cpufetch
   - eza  
   - fzf  
   - wget  
   - go  
+  - gdu
   - htop  
   - neovim  
   - nvm
@@ -17,4 +18,5 @@
   - tldr  
   - tmux  
   - unzip  
+  - yazi
   - zsh  

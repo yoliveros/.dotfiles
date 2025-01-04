@@ -73,3 +73,13 @@ export PATH="$PATH:/opt/android-studio/bin"
 export JAVA_HOME="/opt/android-studio/jbr"
 export ANDROID_HOME="$HOME/Android/Sdk"
 export NDK_HOME="$ANDROID_HOME/ndk/28.0.12433566"
+
+# yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
