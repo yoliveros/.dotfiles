@@ -13,6 +13,7 @@
   - nvm
   - meson
   - pnpm  
+  - ripgrep  
   - starship  
   - stow  
   - tldr  
