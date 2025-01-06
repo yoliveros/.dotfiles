@@ -1,14 +1,15 @@
 
 ## Brew:  
+  - atuin   
   - bat  
   - bear  
+  - btop
   - cpufetch
   - eza  
   - fzf  
   - wget  
   - go  
   - gdu
-  - htop  
   - neovim  
   - nvm
   - meson
