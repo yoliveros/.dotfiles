@@ -49,12 +49,10 @@ export NVM_DIR="$HOME/.nvm"
 # bun completions
 [ -s "/home/yoliveros/.bun/_bun" ] && source "/home/yoliveros/.bun/_bun"
 
-
-#snap 
-export PATH="$PATH:/snap/bin"
-
+# starship
 eval "$(starship init zsh)"
 
+# dotnet
 export PATH="$PATH:/home/yoliveros/.dotnet/tools"
 
 # pnpm
