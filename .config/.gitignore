@@ -1,0 +1,5 @@
+*
+#Allow
+!.gitignore
+!ghostty
+!yatzi
