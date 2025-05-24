@@ -20,8 +20,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 # Custom settings
 alias vim='nvim'
 alias l='eza -l --icons --color --no-user'
@@ -31,20 +29,12 @@ alias ll='eza -l -a --icons --color --no-user'
 bindkey -s '\C-f' 'tmux-sessionizer\n'
 # End of custom settings
 
-# source /home/linuxbrew/.linuxbrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # golang
 export PATH=$PATH:/usr/local/go/bin
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
-
-#nvm
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # bun completions
 [ -s "/home/yoliveros/.bun/_bun" ] && source "/home/yoliveros/.bun/_bun"
@@ -63,9 +53,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# dotnet
-export DOTNET_ROOT="/home/linuxbrew/.linuxbrew/opt/dotnet/libexec"
-
 # android studio
 export PATH="$PATH:/opt/android-studio/bin"
 export JAVA_HOME="/opt/android-studio/jbr"
@@ -82,6 +69,8 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-. "$HOME/.atuin/bin/env"
-
 eval "$(atuin init zsh --disable-up-arrow)"
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

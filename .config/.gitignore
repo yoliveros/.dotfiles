@@ -1,5 +1,13 @@
+# Ignore all
 *
-#Allow
+
+# Allow
 !.gitignore
-!ghostty
-!yatzi
+!ghostty/
+!ghostty/**
+!yazi/
+!yazi/**
+!hypr/
+!hypr/**
+!waybar/
+!waybar/**
