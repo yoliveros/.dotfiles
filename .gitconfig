@@ -1,6 +1,10 @@
 [user]
 	name = yoliveros
 	email = 28690224+yoliveros@users.noreply.github.com
+[credential]
+	helper = 
+[credential "github.com"]
+	useHttpPath = true
 [init]
 	defaultBranch = main
 [pull]
