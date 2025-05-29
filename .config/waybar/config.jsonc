@@ -12,17 +12,19 @@
         "cpu",
         "memory",
         "temperature",
+        "custom/media",
+        "mpd",
         "power-profiles-daemon",
     ],
     "modules-center": [
         "hyprland/workspaces"
     ],
     "modules-right": [
-        // "mpd",
         // "idle_inhibitor",
         // "cpu",
         // "memory",
         // "temperature",
+        // "mpd",
         "backlight",
         "keyboard-state",
         "pulseaudio",
@@ -192,11 +194,11 @@
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon}",
         //"format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        // "format-source": "{volume}% ",
-        // "format-source-muted": "",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": "{icon} ",
+        "format-muted": "{volume} ",
+        "format-source": "",
+        "format-source-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
