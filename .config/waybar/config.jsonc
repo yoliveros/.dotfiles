@@ -7,31 +7,22 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        //"hyprland/window"
         "tray",
         "cpu",
         "memory",
+        "keyboard-state",
         "temperature",
-        "custom/media",
-        "mpd",
-        "power-profiles-daemon",
     ],
     "modules-center": [
         "hyprland/workspaces"
     ],
     "modules-right": [
-        // "idle_inhibitor",
-        // "cpu",
-        // "memory",
-        // "temperature",
-        // "mpd",
+        "power-profiles-daemon",
+        "custom/media",
         "backlight",
-        "keyboard-state",
         "pulseaudio",
-        //"hyprland/language",
         "battery",
         "battery#bat2",
-        "network",
         "clock",
         "custom/power"
     ],
@@ -49,7 +40,7 @@
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
-        "format": "{name} {icon}",
+        "format": "{name} {icon} ",
         "format-icons": {
             "locked": "",
             "unlocked": ""
@@ -211,16 +202,17 @@
         "on-click": "pavucontrol"
     },
     "custom/media": {
-        "format": "{icon} {text}",
+        "format": "{text}",
         "return-type": "json",
-        "max-length": 40,
+        "tooltip": true,
+        "tooltip-format":"{alt}",
+        "max-length": 15,
         "format-icons": {
-            "spotify": "",
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
+        "on-click": "playerctl play-pause"
     },
     "custom/power": {
     "format" : "⏻",
@@ -228,10 +220,10 @@
 		"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
 		"menu-actions": {
-			"shutdown": "shutdown",
+			"shutdown": "shutdown now",
 			"reboot": "reboot",
 			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
+			// "hibernate": "systemctl hibernate"
 		}
   }
 }

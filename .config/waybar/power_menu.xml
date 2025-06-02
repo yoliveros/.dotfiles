@@ -4,11 +4,11 @@
     <child>
 		<object class="GtkMenuItem" id="suspend">
 			<property name="label">Suspend</property>
-        </object>
+    </object>
 	</child>
 	<child>
         <object class="GtkMenuItem" id="hibernate">
-			<property name="label">Hibernate</property>
+			    <property name="label">Hibernate</property>
         </object>
 	</child>
     <child>

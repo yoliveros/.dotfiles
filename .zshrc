@@ -3,8 +3,6 @@
 
 ZSH_THEME=""
 
-plugins=(git)
-
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
@@ -23,6 +21,22 @@ alias ll='eza -l -a --icons --color --no-user'
 # bash way
 bindkey -s '\C-f' 'tmux-sessionizer\n'
 # End of custom settings
+
+# History
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
+# Completion styling
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 # golang
 export PATH=$PATH:/usr/local/go/bin
@@ -47,12 +61,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-# android studio
-export PATH="$PATH:/opt/android-studio/bin"
-export JAVA_HOME="/opt/android-studio/jbr"
-export ANDROID_HOME="$HOME/Android/Sdk"
-export NDK_HOME="$ANDROID_HOME/ndk/28.0.12433566"
 
 # yazi
 function y() {

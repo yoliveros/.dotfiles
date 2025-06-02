@@ -100,6 +100,7 @@ button:hover {
 #network,
 #pulseaudio,
 #wireplumber,
+#keyboard-state,
 #custom-media,
 #tray,
 #mode,
@@ -112,7 +113,6 @@ button:hover {
     padding: 0.3rem 1rem;
     margin-top: 5px;
 }
-
 
 #clock {
   color: @blue;
@@ -138,6 +138,7 @@ button:hover {
 }
 
 #temperature {
+  border-radius: 0px 1rem 1rem 0px;
   color: @peach;
 }
 
@@ -150,7 +151,6 @@ button:hover {
 }
 
 #backlight {
-  border-radius: 1rem 0 0 1rem;
   color: @yellow;
 }
 
@@ -197,7 +197,7 @@ button:hover {
 }
 
 #power-profiles-daemon {
-    border-radius: 0 1rem 1rem 0;
+    border-radius: 1rem 0 0 1rem;
     padding-right: 15px;
 }
 
