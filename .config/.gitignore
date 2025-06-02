@@ -11,3 +11,5 @@
 !hypr/**
 !waybar/
 !waybar/**
+!swaync/
+!swaync/**

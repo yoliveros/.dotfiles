@@ -123,13 +123,15 @@ class PlayerManager:
         else:
             track_info = title
 
+        pause_icon = " "
+        play_icon = " "
         if track_info:
             if player.props.status == "Playing":
-                track_info = " " + track_info
-                title = " " + title
+                track_info = play_icon + track_info
+                title = play_icon + title
             else:
-                track_info = " " + track_info
-                title = " " + title 
+                track_info = pause_icon + track_info
+                title = pause_icon + title 
         # only print output if no other player is playing
         current_playing = self.get_first_playing_player()
         if current_playing is None or current_playing.props.player_name == player.props.player_name:
