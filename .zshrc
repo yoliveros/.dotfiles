@@ -112,3 +112,7 @@ zinit light-mode for \
 
 # highlighting 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Manpages highlighting
+# export MANPAGER="less -R --use-color -Dd+r -Du+b"
+export MANPAGER="nvim +Man!"
