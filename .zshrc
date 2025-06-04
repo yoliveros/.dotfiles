@@ -26,6 +26,7 @@ fi
 alias vim='nvim'
 alias l='eza -l --icons --color --no-user'
 alias ll='eza -l -a --icons --color --no-user'
+alias grep='grep --color'
 
 # bash way
 bindkey -s '\C-f' 'tmux-sessionizer\n'
