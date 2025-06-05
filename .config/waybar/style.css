@@ -219,5 +219,6 @@ label:focus {
 
 #custom-power {
   border-radius: 1rem;
+  margin-right: 0.75rem;
   color: @maroon;
 }
