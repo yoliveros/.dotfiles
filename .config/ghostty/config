@@ -2,6 +2,7 @@ theme =
 background = 
 background-opacity = 0.9
 shell-integration = zsh
+gtk-single-instance = true
 font-family = "MonaspiceNe Nerd Font Mono"
 font-feature = calt
 font-feature = ss01
