@@ -94,3 +94,6 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # Manpages highlighting
 # export MANPAGER="less -R --use-color -Dd+r -Du+b"
 export MANPAGER="nvim +Man!"
+
+# Flutter
+export PATH="$HOME/development/flutter/bin:$PATH"
