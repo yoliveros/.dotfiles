@@ -3,13 +3,13 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: "MonaspiceNe Nerd Font Mono", FontAwesome;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 window#waybar {
     background-color: transparent;
     color: @text;
-    margin: 0px 5px;
+    margin: 0px 4px;
 }
 
 window#waybar.hidden {
@@ -54,21 +54,21 @@ button:hover {
 }
 
 #workspaces {
-  border-radius: 1rem;
+  border-radius: 0.3rem;
   background-color: @surface0;
-  margin-top: 5px;
+  margin-top: 4px;
 }
 
 #workspaces button {
-    padding: 0px 0.3rem;
-    border-radius: 1rem;
+    padding: 0px 0.25rem;
+    border-radius: 0.3rem;
     background-color: transparent;
     color: @lavender;
 }
 
 #workspaces button:hover {
   color: @sapphire;
-  border-radius: 1rem;
+  border-radius: 0.3rem;
 }
 
 #workspaces button.focused {
@@ -82,7 +82,7 @@ button:hover {
 
 #workspaces button.active {
   color: @sky;
-  border-radius: 1rem;
+  border-radius: 0.3rem;
 }
 
 #mode {
@@ -110,13 +110,13 @@ button:hover {
 #mpd,
 #custom-power {
     background-color: @surface0;
-    padding: 0.3rem 1rem;
-    margin-top: 5px;
+    padding: 0.25rem 1rem;
+    margin-top: 4px;
 }
 
 #clock {
   color: @blue;
-  border-radius: 0px 1rem 1rem 0px;
+  border-radius: 0px 0.2rem 0.2rem 0px;
   margin-right: 0.5rem;
 }
 
@@ -129,7 +129,7 @@ button:hover {
 }
 
 #cpu {
-  border-radius: 1rem 0 0 1rem;
+  border-radius: 0.3rem 0 0 0.3rem;
   color: @mauve;
 }
 
@@ -138,7 +138,7 @@ button:hover {
 }
 
 #temperature {
-  border-radius: 0px 1rem 1rem 0px;
+  border-radius: 0px 0.3rem 0.3rem 0px;
   color: @peach;
 }
 
@@ -159,7 +159,7 @@ button:hover {
 }
 
 #workspaces {
-  margin-top: 5px;
+  margin-top: 4px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -191,13 +191,13 @@ button:hover {
 }
 
 #tray {
-  border-radius: 1rem;
+  border-radius: 0.3rem;
   margin-left: 0.75rem;
   margin-right: 0.5rem;
 }
 
 #power-profiles-daemon {
-    border-radius: 1rem 0 0 1rem;
+    border-radius: 0.3rem 0 0 0.2rem;
     padding-right: 15px;
 }
 
@@ -218,7 +218,7 @@ label:focus {
 }
 
 #custom-power {
-  border-radius: 1rem;
+  border-radius: 0.3rem;
   margin-right: 0.75rem;
   color: @maroon;
 }

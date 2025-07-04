@@ -99,7 +99,7 @@
     },
     "clock": {
         "timezone": "America/Bogota",
-        "format": "{:%H:%M}",
+        "format": "{:%d - %H:%M}",
         "format-alt": "{:%d/%m/%y}",
 	      "tooltip-format": "<tt><big>{calendar}</big></tt>",
         "calendar": {
