@@ -8,6 +8,8 @@
     // Choose the order of the modules
     "modules-left": [
         "tray",
+        "battery",
+        "battery#bat2",
         "cpu",
         "memory",
         "keyboard-state",
@@ -21,8 +23,6 @@
         "custom/media",
         "backlight",
         "pulseaudio",
-        "battery",
-        "battery#bat2",
         "clock",
         "custom/power"
     ],
@@ -44,7 +44,7 @@
         "format-icons": {
             "locked": "",
             "unlocked": ""
-        }
+        },
     },
     "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -99,7 +99,7 @@
     },
     "clock": {
         "timezone": "America/Bogota",
-        "format": "{:%d - %H:%M}",
+        "format": "{:%d/%m - %H:%M}",
         "format-alt": "{:%d/%m/%y}",
 	      "tooltip-format": "<tt><big>{calendar}</big></tt>",
         "calendar": {
