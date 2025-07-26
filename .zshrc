@@ -87,3 +87,8 @@ export MANPAGER="nvim +Man!"
 
 # Flutter
 export PATH="$HOME/development/flutter/bin:$PATH"
+
+# adb android 
+if [ -d "$HOME/adb-fastboot/platform-tools" ] ; then
+ export PATH="$HOME/adb-fastboot/platform-tools:$PATH"
+fi
