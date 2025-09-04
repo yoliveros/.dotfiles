@@ -98,7 +98,7 @@
         }
     },
     "clock": {
-        "timezone": "America/Bogota",
+        "timezone": "America/Caracas",
         "format": "{:%d/%m - %H:%M}",
         "format-alt": "{:%d/%m/%y}",
 	      "tooltip-format": "<tt><big>{calendar}</big></tt>",
