@@ -12,6 +12,7 @@
         "battery#bat2",
         "cpu",
         "memory",
+        // "hyprland/language",
         "keyboard-state",
         "temperature",
     ],
@@ -21,7 +22,7 @@
     "modules-right": [
         "power-profiles-daemon",
         "custom/media",
-        "backlight",
+        // "backlight",
         "pulseaudio",
         "clock",
         "custom/power"
