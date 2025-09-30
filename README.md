@@ -1,24 +1,2 @@
 
-## Brew:  
-  - atuin   
-  - bat  
-  - bear  
-  - btop
-  - cpufetch
-  - eza  
-  - fzf  
-  - wget  
-  - go  
-  - gdu
-  - neovim  
-  - nvm
-  - meson
-  - pnpm  
-  - ripgrep  
-  - starship  
-  - stow  
-  - tldr  
-  - tmux  
-  - unzip  
-  - yazi
-  - zsh  
+## Pacman:  
