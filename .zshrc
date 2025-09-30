@@ -11,6 +11,8 @@ autoload -U colors && colors
 zstyle ':completion:*' menu select
 zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' squeeze-slashes false
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} ma=0\;33
+# zstyle ':completion:*' file-list true
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
@@ -24,8 +26,11 @@ fi
 
 # Custom settings
 alias vim='nvim'
-alias l='eza -l --icons --color --no-user'
-alias ll='eza -l -a --icons --color --no-user'
+alias ls='eza -GHF --icons --color \$@'
+alias l='eza -lh --icons --color --no-user'
+alias ll='eza -lah --icons --color --no-user'
+alias lt='eza -lh --tree --icons --color --no-user'
+alias llt='eza -lah --tree --icons --color --no-user'
 alias grep='grep --color'
 
 # bash way
