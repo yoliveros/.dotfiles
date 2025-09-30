@@ -27,6 +27,10 @@ dep=(
   "zsh",
   "hypridle",
   "hyprlock",
+  "hyprpolkintagent", # To do
+  "hyprsysteminfo",
+  "hyprcursor",
+  "hyprsunset",
 )
 
 cp ./systemd/themenizer.service.template ./systemd/themenizer.service
