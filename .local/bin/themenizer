@@ -1,6 +1,33 @@
 #!/usr/bin/env bash
 
+# Required dependencies
+required=("linux-wallpaperengine" "wal")
 
-echo "Hola"
+# Check dependencies
+for cmd in "${required[@]}"; do
+  if ! which "$cmd" &> /dev/null; then
+    echo "Error: '$cmd' not found"
+    exit 1
+  fi
+done
 
+bg_dir=/home/"${USER}"/.local/share/Steam/steamapps/workshop/content/431960/
+
+bg=$(find $bg_dir -maxdepth 1 -type d -print0 | shuf -zn1 | xargs -0 basename)
+
+pkill linux-wallpaper
+
+monitors=($(hyprctl monitors | grep "^Monitor" | cut -d' ' -f2))
+
+pywall_img=${XDG_CACHE_HOME}/wallpaper.png
+# Screenshot for pywal
+linux-wallpaperengine --screenshot $pywall_img $bg
+
+for cmd in "${monitors[@]}"; do
+  linux-wallpaperengine --screen-root "$cmd" \
+  --silent --noautomute --no-audio-processing \
+  --disable-mouse --disable-parallax --fps 30 $bg </dev/null &>/dev/null & 
+done
+
+# wal -i $pywall_img
 
