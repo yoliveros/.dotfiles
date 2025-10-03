@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Required dependencies
-required=("linux-wallpaperengine" "wal")
+required=("wal")
 
 # Check dependencies
 for cmd in "${required[@]}"; do
@@ -11,23 +11,14 @@ for cmd in "${required[@]}"; do
   fi
 done
 
-bg_dir=/home/"${USER}"/.local/share/Steam/steamapps/workshop/content/431960/
+WALLPAPER_DIR="/home/${USER}/wallpapers/"
+CURRENT_WALL=$(hyprctl hyprpaper listloaded)
 
-bg=$(find $bg_dir -maxdepth 1 -type d -print0 | shuf -zn1 | xargs -0 basename)
+WALLPAPER=$(find "$WALLPAPER_DIR" -type f | shuf -n 1)
+echo $WALLPAPER
 
-pkill linux-wallpaper
+swaybg -i $WALLPAPER </dev/null &>/dev/null &
 
-monitors=($(hyprctl monitors | grep "^Monitor" | cut -d' ' -f2))
+wal -i $WALLPAPER -q </dev/null &>/dev/null &
 
-pywall_img=${XDG_CACHE_HOME}/wallpaper.png
-# Screenshot for pywal
-linux-wallpaperengine --screenshot $pywall_img $bg
-
-for cmd in "${monitors[@]}"; do
-  linux-wallpaperengine --screen-root "$cmd" \
-  --silent --noautomute --no-audio-processing \
-  --disable-mouse --disable-parallax --fps 30 $bg </dev/null &>/dev/null & 
-done
-
-# wal -i $pywall_img
-
+# ln -sf /home/"${USER}"/.dotfiles/systemd/"${file}" /etc/systemd/system/"${file}"

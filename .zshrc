@@ -98,3 +98,7 @@ export PATH="$HOME/development/flutter/bin:$PATH"
 if [ -d "$HOME/adb-fastboot/platform-tools" ] ; then
  export PATH="$HOME/adb-fastboot/platform-tools:$PATH"
 fi
+
+# Pywal colors
+(cat ~/.cache/wal/sequences &)
+source ~/.cache/wal/colors-tty.sh
