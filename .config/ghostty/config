@@ -1,5 +1,4 @@
 theme = wal-theme 
-background = 
 background-opacity = 0.9
 shell-integration = zsh
 gtk-single-instance = true

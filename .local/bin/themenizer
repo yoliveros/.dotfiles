@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Required dependencies
-required=("wal")
+required=("wal" "swaybg")
 
 # Check dependencies
 for cmd in "${required[@]}"; do
@@ -11,14 +11,18 @@ for cmd in "${required[@]}"; do
   fi
 done
 
-WALLPAPER_DIR="/home/${USER}/wallpapers/"
-CURRENT_WALL=$(hyprctl hyprpaper listloaded)
+WALLPAPER_DIR=~/wallpapers/
 
 WALLPAPER=$(find "$WALLPAPER_DIR" -type f | shuf -n 1)
-echo $WALLPAPER
 
-swaybg -i $WALLPAPER </dev/null &>/dev/null &
+wal -qnti $WALLPAPER &
 
-wal -i $WALLPAPER -q </dev/null &>/dev/null &
+pkill swaybg 
 
-# ln -sf /home/"${USER}"/.dotfiles/systemd/"${file}" /etc/systemd/system/"${file}"
+swaybg -i $WALLPAPER &
+
+# Ghostty reload
+ln -sf ~/.cache/wal/colors-hyprland.conf ~/.config/hypr/wal-theme.conf
+ln -sf ~/.cache/wal/colors-waybar.css ~/.config/waybar/wal-theme.css
+ln -sf ~/.cache/wal/ghostty.conf ~/.config/ghostty/themes/wal-theme.config
+pkill -SIGUSR2 ghostty

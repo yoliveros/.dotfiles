@@ -1,4 +1,4 @@
-@import "mocha.css";
+@import "wal-theme.css";
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -8,7 +8,7 @@
 
 window#waybar {
     background-color: transparent;
-    color: @text;
+    color: @foreground;
     margin: 0px 4px;
 }
 
@@ -45,17 +45,17 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px @sky;
+    box-shadow: inset 0 -3px @color6;
 }
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-    background-color: @surface1;
+    background-color: @color5;
 }
 
 #workspaces {
   border-radius: 0.3rem;
-  background-color: @surface0;
+  background-color: @background;
   margin-top: 4px;
 }
 
@@ -63,30 +63,30 @@ button:hover {
     padding: 0px 0.25rem;
     border-radius: 0.3rem;
     background-color: transparent;
-    color: @lavender;
+    color: @color1;
 }
 
 #workspaces button:hover {
-  color: @sapphire;
+  color: @color15;
   border-radius: 0.3rem;
 }
 
 #workspaces button.focused {
-    background-color: #64727D;
+    background-color: @background;
     box-shadow: inset 0 -3px #ffffff;
 }
 
 #workspaces button.urgent {
-    background-color: @red;
+    background-color: @color1;
 }
 
 #workspaces button.active {
-  color: @sky;
+  color: @color15;
   border-radius: 0.3rem;
 }
 
 #mode {
-    background-color: #64727D;
+    background-color: @background;
     box-shadow: inset 0 -3px #ffffff;
 }
 
@@ -109,49 +109,49 @@ button:hover {
 #power-profiles-daemon,
 #mpd,
 #custom-power {
-    background-color: @surface0;
+    background-color: @color0;
     padding: 0.25rem 1rem;
     margin-top: 4px;
 }
 
 #clock {
-  color: @blue;
+  color: @color15;
   border-radius: 0px 0.2rem 0.2rem 0px;
   margin-right: 0.5rem;
 }
 
 #battery{
-  color: @green;
+  color: @color9;
   border-radius: 0.3rem 0 0 0.3rem;
 }
 
 #pulseaudio {
-  color: @teal;
+  color: @color14;
 }
 
 #cpu {
-  color: @mauve;
+  color: @color9;
 }
 
 #memory {
-  color: @green;
+  color: @color14;
 }
 
 #temperature {
   border-radius: 0px 0.3rem 0.3rem 0px;
-  color: @peach;
+  color: @color10;
 }
 
 #battery.charging { 
- color: @green;
+ color: @color14;
 }
 
 #battery.warning:not(.chargin) { 
-  color: @red;
+  color: @color9;
 }
 
 #backlight {
-  color: @yellow;
+  color: @color10;
 }
 
 #window,
@@ -181,7 +181,7 @@ button:hover {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: @red;
+    background-color: @background;
     color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -202,23 +202,23 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    color: @red;
+    color: @color1;
 }
 
 #power-profiles-daemon.balanced {
-    color: @blue;
+    color: @color2;
 }
 
 #power-profiles-daemon.power-saver {
-    color: @green;
+    color: @color3;
 }
 
 label:focus {
-    background-color: #000000;
+    background-color: @background;
 }
 
 #custom-power {
   border-radius: 0.3rem;
   margin-right: 0.75rem;
-  color: @maroon;
+  color: @color1;
 }

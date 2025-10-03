@@ -13,3 +13,7 @@
 !swaync/**
 !wofi
 !wofi/**
+!wal
+!wal/**
+!systemd
+!systemd/**
