@@ -1,22 +1,33 @@
+@import "wal-theme.css"
+
 window {
   margin: 0.25rem;
+  font-family: MonaspiceNe Nerd Font Mono;
   border-radius: .5rem;
+  background-color: @background;
 }
 
 #outer-box {
   padding: 2rem;
+  background-color: @background;
 }
 
-#input{
+#input {
   margin: .25rem;
+  color: @foreground;
 }
 
-#inner-box{
+#inner-box {
   margin: .25rem;
+  background-color: @background;
 }
 
 #entry {
   margin: .15rem;
+}
+
+#entry #text {
+  color: @color7;
 }
 
 #img {

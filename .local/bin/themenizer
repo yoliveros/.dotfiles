@@ -21,8 +21,8 @@ pkill swaybg
 
 swaybg -i $WALLPAPER &
 
-# Ghostty reload
-ln -sf ~/.cache/wal/colors-hyprland.conf ~/.config/hypr/wal-theme.conf
+# Theme reloads
 ln -sf ~/.cache/wal/colors-waybar.css ~/.config/waybar/wal-theme.css
+ln -sf ~/.cache/wal/colors-waybar.css ~/.config/wofi/wal-theme.css
 ln -sf ~/.cache/wal/ghostty.conf ~/.config/ghostty/themes/wal-theme.config
 pkill -SIGUSR2 ghostty
