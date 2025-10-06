@@ -19,10 +19,9 @@ wal -qnti $WALLPAPER &
 
 pkill swaybg 
 
-swaybg -i $WALLPAPER &
+swaybg -i $WALLPAPER 
 
 # Theme reloads
 ln -sf ~/.cache/wal/colors-waybar.css ~/.config/waybar/wal-theme.css
-ln -sf ~/.cache/wal/colors-waybar.css ~/.config/wofi/wal-theme.css
 ln -sf ~/.cache/wal/ghostty.conf ~/.config/ghostty/themes/wal-theme.config
 pkill -SIGUSR2 ghostty

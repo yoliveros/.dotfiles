@@ -1,4 +1,10 @@
-@import "wal-theme.css"
+@import ".cache/wal/colors-waybar.css";
+
+* {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
 
 window {
   margin: 0.25rem;
@@ -9,11 +15,13 @@ window {
 
 #outer-box {
   padding: 2rem;
+  border-radius: .5rem;
   background-color: @background;
 }
 
 #input {
   margin: .25rem;
+  background-color: @color8;
   color: @foreground;
 }
 
@@ -27,7 +35,15 @@ window {
 }
 
 #entry #text {
-  color: @color7;
+  color: @foreground;
+}
+
+#entry:selected {
+  background-color: @color1;
+}
+
+#entry:selected #text {
+  color: @color0;
 }
 
 #img {

@@ -17,3 +17,5 @@
 !wal/**
 !systemd
 !systemd/**
+!calcure
+!calcure/**

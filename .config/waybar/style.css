@@ -51,6 +51,7 @@ button:hover {
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
     background-color: @color8;
+    color: @color0
 }
 
 #workspaces {
@@ -130,7 +131,7 @@ button:hover {
 }
 
 #cpu {
-  color: @color9;
+  color: @color1;
 }
 
 #memory {
