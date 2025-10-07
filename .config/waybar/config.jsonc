@@ -102,8 +102,9 @@
     "clock": {
         "timezone": "America/Caracas",
         "format": "{:%d/%m - %H:%M}",
-        "format-alt": "{:%d/%m/%y}",
+        // "format-alt": "{:%d/%m/%y}",
 	      "tooltip-format": "<tt><big>{calendar}</big></tt>",
+        "on-click": "ghostty -e sh -c calcure",
         "calendar": {
 		    "mode"          : "month",
 		    "mode-mon-col"  : 3,
@@ -117,13 +118,13 @@
 			    "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
 		    },
         "actions": {
-		"on-click-right": "mode",
-		"on-click-forward": "tz_up",
-		"on-click-backward": "tz_down",
-		"on-scroll-up": "shift_up",
-		"on-scroll-down": "shift_down"
-	}
-	},
+          "on-click-right": "mode",
+          "on-click-forward": "tz_up",
+          "on-click-backward": "tz_down",
+          "on-scroll-up": "shift_up",
+          "on-scroll-down": "shift_down"
+        }
+    },
     },
     "cpu": {
         "format": "{usage}% ",
@@ -217,16 +218,16 @@
         "on-click": "playerctl play-pause"
     },
     "custom/power": {
-    "format" : "⏻",
-		"tooltip": true,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown now",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			// "hibernate": "systemctl hibernate"
-		}
+      "format" : "⏻",
+      "tooltip": true,
+      "menu": "on-click",
+      "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+      "menu-actions": {
+        "shutdown": "shutdown now",
+        "reboot": "reboot",
+        "suspend": "systemctl suspend",
+        // "hibernate": "systemctl hibernate"
+      }
   },
   "custom/gpu": {
     "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
