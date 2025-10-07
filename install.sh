@@ -36,7 +36,11 @@ dep=(
   "python-pywal16"
 )
 
-# paru -S "${dep[@]}"
+paru -S "${dep[@]}"
+#
+
+# Simlink dotfiles
+stow .
 #
 
 # Themenizer service
@@ -50,5 +54,3 @@ for service in "${must_init_services[@]}"; do
 done
 # 
 
-# Simlink dotfiles
-stow .
