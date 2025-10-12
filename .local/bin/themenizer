@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Required dependencies
-required=("wal" "swaybg")
+required=("wal" "swaybg" "colorz")
 
 # Check dependencies
 for cmd in "${required[@]}"; do
@@ -15,7 +15,7 @@ WALLPAPER_DIR=~/wallpapers/
 
 WALLPAPER=$(find "$WALLPAPER_DIR" -type f | shuf -n 1)
 
-wal -qnti $WALLPAPER &
+wal --backend colorz -qnti $WALLPAPER &
 
 pkill swaybg 
 
