@@ -103,7 +103,8 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd,
-#custom-power {
+#custom-power,
+#custom-gpu {
     background-color: @background;
     padding: 0.25rem 1rem;
     margin-top: 4px;
@@ -124,12 +125,21 @@ button:hover {
   color: @color12;
 }
 
-#cpu {
+#network {
+  border-radius: 0.2rem 0px 0px 0.2rem;
   color: @color14;
 }
 
-#memory {
+#cpu {
   color: @color12;
+}
+
+#memory {
+  color: @color11;
+}
+
+#custom-gpu {
+  color: @color10;
 }
 
 #temperature {

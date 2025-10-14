@@ -10,11 +10,10 @@
         "tray",
         "battery",
         "battery#bat2",
+        "network",
         "cpu",
         "memory",
-        // "custom/gpu",
-        // "hyprland/language",
-        "keyboard-state",
+        "custom/gpu",
         "temperature",
     ],
     "modules-center": [
@@ -23,7 +22,9 @@
     "modules-right": [
         "power-profiles-daemon",
         "custom/media",
-        "backlight",
+        // "backlight",
+        // "keyboard-state",
+        // "hyprland/language",
         "pulseaudio",
         "clock",
         "custom/power"
@@ -131,7 +132,7 @@
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% "
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -231,7 +232,7 @@
   },
   "custom/gpu": {
     "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
-    "format": " %{} ",
-    "interval": 4
+    "format": "{}% ", // Todo: find a GPU glyph
+    "interval": 5
   }
 }
