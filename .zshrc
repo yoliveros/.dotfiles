@@ -32,6 +32,7 @@ alias l='eza -lh --icons --color --no-user'
 alias ll='eza -lah --icons --color --no-user'
 alias lt='eza -lh --tree --icons --color --no-user'
 alias llt='eza -lah --tree --icons --color --no-user'
+alias lg='lazygit'
 alias grep='grep --color'
 
 # bash way

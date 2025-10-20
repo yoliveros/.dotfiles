@@ -14,6 +14,7 @@ dep=(
   "wget" 
   "gdu" 
   "go" 
+  "lazygit"
   "ghostty" 
   "neovim" 
   "nvm" 
@@ -31,6 +32,7 @@ dep=(
   "hyprpolkintagent" # To do
   "hyprsysteminfo"
   "hyprcursor"
+  "hyprlauncher"
   "hyprsunset"
   "linux-wallpaperengine-git"
   "python-pywal16"
