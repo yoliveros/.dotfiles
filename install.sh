@@ -36,6 +36,7 @@ dep=(
   "hyprsunset"
   "linux-wallpaperengine-git"
   "python-pywal16"
+  "zoxide"
 )
 
 paru -S "${dep[@]}"
