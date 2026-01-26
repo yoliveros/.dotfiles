@@ -18,6 +18,7 @@ dep=(
   "discord"
   "eza" 
   "fzf" 
+  "fnm"
   "wget" 
   "gdu" 
   "go" 
@@ -34,7 +35,6 @@ dep=(
   "modrinth-app"
   "ghostty" 
   "neovim" 
-  "nvm" 
   "meson" 
   "okular"
   "pnpm" 
@@ -53,6 +53,8 @@ dep=(
   "wofi"
   "zsh"
   "zoxide"
+  "qemu-full"
+  "libvirt"
 )
 
 paru -S "${dep[@]}"

@@ -29,7 +29,7 @@ fi
 # Custom settings
 alias v='nvim'
 alias vim='nvim'
-alias ls='eza -GHF --icons --color \$@'
+alias ls='eza -GHF --icons --color=auto'
 alias l='eza -lh --icons --color --no-user'
 alias ll='eza -lah --icons --color --no-user'
 alias lt='eza -lh --tree --icons --color --no-user'
@@ -66,7 +66,7 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 
 # bun completions
-[ -s "/home/yoliveros/.bun/_bun" ] && source "/home/yoliveros/.bun/_bun"
+[ -s "/home/$HOME/.bun/_bun" ] && source "/home/$HOME/.bun/_bun"
 
 # starship
 eval "$(starship init zsh)"
@@ -78,8 +78,11 @@ eval "$(zoxide init zsh)"
 export DOTNET_ROOT="$HOME/.dotnet"
 export PATH="$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools"
 
+# fnm
+eval "$(fnm env --use-on-cd --shell zsh)"
+
 # pnpm
-export PNPM_HOME="/home/yoliveros/.local/share/pnpm"
+export PNPM_HOME="/home/$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -87,13 +90,6 @@ esac
 # pnpm end
 
 eval "$(atuin init zsh --disable-up-arrow)"
-
-# nvm(){
-  unset -f nvm
-  export NVM_DIR="$HOME/.config/nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# }
 
 # highlighting 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -111,3 +107,6 @@ if [ -d "$HOME/adb-fastboot/platform-tools" ] ; then
 fi
 
 # zprof
+
+# Vulkan
+source ~/vulkan/1.4.335.0/setup-env.sh
