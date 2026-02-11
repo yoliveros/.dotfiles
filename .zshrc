@@ -34,8 +34,10 @@ alias l='eza -lh --icons --color --no-user'
 alias ll='eza -lah --icons --color --no-user'
 alias lt='eza -lh --tree --icons --color --no-user'
 alias llt='eza -lah --tree --icons --color --no-user'
-alias lg='lazygit'
 alias grep='grep --color'
+alias lg='lazygit'
+alias mail='neomutt'
+alias chat='weechat'
 
 # bash way
 bindkey -s '\C-f' 'tmux-sessionizer\n'
@@ -110,3 +112,6 @@ fi
 
 # Vulkan
 source ~/vulkan/1.4.335.0/setup-env.sh
+
+# Disable mailsync notis
+export MAILSYNC_MUTE=1

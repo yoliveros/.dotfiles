@@ -11,3 +11,5 @@
 	rebase = true
 [rerere]
 	enable = true
+[core]
+	editor = nvim
