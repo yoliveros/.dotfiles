@@ -23,5 +23,5 @@ swaybg -i $WALLPAPER
 
 # Theme reloads
 ln -sf ~/.cache/wal/colors-waybar.css ~/.config/waybar/wal-theme.css
-ln -sf ~/.cache/wal/ghostty.conf ~/.config/ghostty/themes/wal-theme
-pkill -SIGUSR2 ghostty
+# ln -sf ~/.cache/wal/ghostty.conf ~/.config/ghostty/themes/wal-theme
+# pkill -SIGUSR2 ghostty
