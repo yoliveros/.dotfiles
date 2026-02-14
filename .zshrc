@@ -115,3 +115,9 @@ source ~/vulkan/1.4.335.0/setup-env.sh
 
 # Disable mailsync notis
 export MAILSYNC_MUTE=1
+
+# ssh git
+if [ -z "$SSH_AUTH_SOCK" ]; then
+   eval "$(ssh-agent -s)"
+fi
+ssh-add ~/.ssh/personal 2>/dev/null
