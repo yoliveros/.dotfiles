@@ -118,7 +118,7 @@ export MAILSYNC_MUTE=1
 
 # ssh git
 if [ -z "$SSH_AUTH_SOCK" ]; then
-   eval "$(ssh-agent -s)"
+   eval "$(ssh-agent -s)" >/dev/null
 fi
 
 ssh-add ~/.ssh/personal 2>/dev/null
