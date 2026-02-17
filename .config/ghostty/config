@@ -1,4 +1,5 @@
 #theme = wal-theme 
+# theme = Kanagawabones
 theme = Catppuccin Mocha
 background-opacity = 0.95
 shell-integration = zsh
