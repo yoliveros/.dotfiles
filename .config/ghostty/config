@@ -2,9 +2,10 @@
 # theme = Kanagawabones
 theme = Catppuccin Mocha
 background-opacity = 0.95
-shell-integration = zsh
+shell-integration = fish
 gtk-single-instance = true
 font-family = "FiraCode Nerd Font Mono"
+# font-family = "Terminess Nerd Font Mono"
 font-size = 18
 # font-feature = calt
 # font-feature = ss01

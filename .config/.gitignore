@@ -17,3 +17,5 @@
 !systemd/**
 !calcure
 !calcure/**
+!fish
+!fish/**
