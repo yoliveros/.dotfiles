@@ -13,7 +13,7 @@ done
 
 WALLPAPER_DIR=~/wallpapers/
 
-WALLPAPER=$(find "$WALLPAPER_DIR" -type f | shuf -n 1)
+WALLPAPER=$(fd "$WALLPAPER_DIR" -t f | shuf -n 1)
 
 wal --backend modern_colorthief -qnti $WALLPAPER &
 
