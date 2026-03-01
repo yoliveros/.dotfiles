@@ -15,7 +15,12 @@ WALLPAPER_DIR=~/wallpapers/
 
 WALLPAPER=$(fd . "$WALLPAPER_DIR" -t f | shuf -n 1)
 
-wal --backend modern_colorthief -qnti $WALLPAPER &
+if python3 -c "import modern_colorthief" &> /dev/null; then
+  wal --backend modern_colorthief -qnti $WALLPAPER &
+else
+  echo "modern_colorthief not found. Using default backend"
+  wal -qnti $WALLPAPER &
+fi
 
 pkill swaybg 
 
