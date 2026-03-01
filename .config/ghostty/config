@@ -1,7 +1,7 @@
 #theme = wal-theme 
 # theme = Kanagawabones
 theme = Catppuccin Mocha
-background-opacity = 0.95
+background-opacity = 0.925
 shell-integration = fish
 gtk-single-instance = true
 font-family = "FiraCode Nerd Font Mono"
