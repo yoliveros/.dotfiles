@@ -13,6 +13,7 @@ dep=(
   "catppucin-gtk-theme-mocha"
   "calcure"
   "chatterino"
+  "cliphist"
   "cloc"
   "colorz"
   "discord"
