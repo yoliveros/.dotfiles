@@ -52,6 +52,7 @@ dep=(
   "stremio"
   "tldr" 
   "tmux" 
+  "timer-bin"
   "ttf-firacode-nerd"
   "unzip" 
   "wofi"

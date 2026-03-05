@@ -51,4 +51,28 @@ if not contains "personal" (ssh-add -l)
   ssh-add ~/.ssh/personal 2>/dev/null
 end
 
+# Stolen from bashbunni
+function pom
+    set split $POMO_SPLIT
+    if ! test -n "$split"
+        set split $(gum choose "25/5" "50/10" "all done" --header "Choose a pomodoro split.")
+    end
+
+    switch $split
+        case 25/5
+            set work 25m
+            set break 5m
+        case 50/10
+            set work 50m
+            set break 10m
+        case 'all done'
+            return
+    end
+
+    timer $work && notify-send "Pomodoro" "Slacking"
+
+    gum confirm "Ready for a break?" && timer $break && notify-send "Pomodoro" \
+      "Working" || pom
+end
+
 bass source ~/vulkan/1.4.335.0/setup-env.sh
