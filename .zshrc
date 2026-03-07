@@ -39,10 +39,6 @@ alias lg='lazygit'
 alias mail='neomutt'
 alias chat='weechat'
 
-# bash way
-bindkey -s '\C-f' 'tmux-sessionizer\n'
-# End of custom settings
-
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history

@@ -51,7 +51,6 @@ dep=(
   "swaync"
   "stremio"
   "tldr" 
-  "tmux" 
   "timer-bin"
   "ttf-firacode-nerd"
   "unzip" 

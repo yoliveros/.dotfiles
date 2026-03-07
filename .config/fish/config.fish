@@ -25,7 +25,7 @@ alias lg 'lazygit'
 alias mail 'neomutt'
 alias chat 'weechat'
 
-bind \ct 'tmux-sessionizer; commandline -f repaint'
+# bind \ct 'tmux-sessionizer; commandline -f repaint'
 
 set -gx MANPAGER "nvim +Man!"
 set -gx MAILSYNC_MUTE 1
