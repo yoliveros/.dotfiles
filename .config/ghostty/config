@@ -8,6 +8,8 @@ font-family = "FiraCode Nerd Font Mono"
 # font-family = "Terminess Nerd Font Mono"
 font-size = 18
 gtk-tabs-location = bottom
+gtk-wide-tabs = false
+window-new-tab-position = end
 
 # Keybinds
 keybind = alt+h=goto_split:left
