@@ -35,6 +35,7 @@ dep=(
   "hyprshot"
   "lazygit"
   "lutris"
+  "man-pages"
   "modrinth-app"
   "ghostty" 
   "neovim" 
