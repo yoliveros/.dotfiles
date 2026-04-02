@@ -53,6 +53,7 @@ end
 
 # Stolen from bashbunni
 function pom
+  while true
     set split $POMO_SPLIT
     if ! test -n "$split"
         set split $(gum choose "25/5" "50/10" "all done" --header "Choose a pomodoro split.")
@@ -71,8 +72,11 @@ function pom
 
     timer $work && notify-send "Pomodoro" "Slacking"
 
-    gum confirm "Ready for a break?" && timer $break && notify-send "Pomodoro" \
-      "Working" || pom
+    if not gum confirm "Ready for a break?"
+      continue
+    end
+    timer $break && notify-send "Pomodoro"  "Working"
+  end
 end
 
 bass source ~/vulkan/1.4.335.0/setup-env.sh
