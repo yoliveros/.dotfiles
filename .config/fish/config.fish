@@ -52,30 +52,35 @@ if not contains "personal" (ssh-add -l)
 end
 
 # Stolen from bashbunni
-function pom
+function pom 
+  set split $POMO_SPLIT
+  if ! test -n "$split"
+      set split $(gum choose "25/5" "50/10" "all done" --header "Choose a pomodoro split.")
+  end
+
+  switch $split
+      case 25/5
+          set work 25m
+          set break 5m
+      case 50/10
+          set work 50m
+          set break 10m
+      case 'all done'
+          return
+  end
+
   while true
-    set split $POMO_SPLIT
-    if ! test -n "$split"
-        set split $(gum choose "25/5" "50/10" "all done" --header "Choose a pomodoro split.")
-    end
-
-    switch $split
-        case 25/5
-            set work 25m
-            set break 5m
-        case 50/10
-            set work 50m
-            set break 10m
-        case 'all done'
-            return
-    end
-
     timer $work && notify-send "Pomodoro" "Slacking"
 
     if not gum confirm "Ready for a break?"
       continue
     end
+
     timer $break && notify-send "Pomodoro"  "Working"
+
+    if not gum confirm "Start next session?"
+      break
+    end
   end
 end
 
