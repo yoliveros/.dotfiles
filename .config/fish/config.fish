@@ -55,7 +55,8 @@ end
 function pom 
   set split $POMO_SPLIT
   if ! test -n "$split"
-      set split $(gum choose "25/5" "50/10" "all done" --header "Choose a pomodoro split.")
+    set split $(gum choose "25/5" "50/10" "all done" \
+      --header "Choose a pomodoro split.")
   end
 
   switch $split
