@@ -42,6 +42,7 @@ dep=(
   "meson" 
   "okular"
   "pnpm" 
+  "profile-sync-daemon"
   "python-pywal16"
   "qbitorrent"
   "ripgrep"
