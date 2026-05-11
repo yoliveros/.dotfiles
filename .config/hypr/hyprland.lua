@@ -398,6 +398,7 @@ hl.window_rule({
 -- })
 -- overlayLayerRule:set_enabled(false)
 
+-- Unreal Engine
 hl.window_rule({
   name = "unreal-editor",
   match = {
