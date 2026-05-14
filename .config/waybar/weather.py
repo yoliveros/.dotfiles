@@ -1,84 +1,34 @@
 #!/usr/bin/env python3
 
-# This is opencode generated btw
-
 import json
 import sys
 import urllib.request
-import urllib.parse
-
-CITY = "Caracas"
-ICONS = {
-    "sunny": "☀",
-    "clear": "☀",
-    "partly cloudy": "⛅",
-    "cloudy": "☁",
-    "overcast": "☁",
-    "mist": "🌫",
-    "fog": "🌫",
-    "haze": "🌫",
-    "patchy rain nearby": "🌦",
-    "patchy rain possible": "🌦",
-    "light rain shower": "🌦",
-    "light rain": "🌧",
-    "moderate or heavy rain with thunder": "⛈",
-    "light rain with thunder": "⛈",
-    "thundery outbreaks possible": "⛈",
-    "thunderstorm": "⛈",
-    "moderate rain": "🌧",
-    "heavy rain": "🌧",
-    "moderate or heavy rain shower": "🌧",
-    "torrential rain shower": "🌧",
-    "light drizzle": "🌦",
-    "patchy light drizzle": "🌦",
-    "light sleet": "🌨",
-    "light snow": "🌨",
-    "moderate snow": "🌨",
-    "heavy snow": "🌨",
-    "blowing snow": "🌨",
-    "patchy light snow": "🌨",
-    "patchy moderate snow": "🌨",
-    "drizzle": "🌦",
-    "sleet": "🌨",
-    "snow": "🌨",
-    "thunder": "⛈",
-    "rain": "🌧",
-}
-
-
-def get_icon(desc: str) -> str:
-    desc = desc.lower()
-    for key, icon in ICONS.items():
-        if key in desc:
-            return icon
-    return "\ue318"
-
 
 def get_weather(city: str):
-    url = f"https://wttr.in/{urllib.parse.quote(city)}?format=j1"
+    url = f"https://wttr.in/?format=%c|%t|%C|%f|%h|%w"
     try:
         with urllib.request.urlopen(url, timeout=10) as r:
-            data = json.loads(r.read().decode())
+            raw = r.read().decode().strip()
     except Exception as e:
         return {"text": "N/A", "alt": "error", "tooltip": str(e), "class": "error"}
 
-    cc = data["current_condition"][0]
-    temp = cc["temp_C"]
-    desc = cc["weatherDesc"][0]["value"]
-    feels = cc["FeelsLikeC"]
-    humidity = cc["humidity"]
-    wind = cc["windspeedKmph"]
-    icon = get_icon(desc)
+    parts = raw.split("|")
+    icon = parts[0] if len(parts) > 0 else ""
+    temp = parts[1].strip() if len(parts) > 1 else "N/A"
+    desc = parts[2] if len(parts) > 2 else ""
+    feels = parts[3].strip() if len(parts) > 3 else "N/A"
+    humidity = parts[4] if len(parts) > 4 else "N/A"
+    wind = parts[5] if len(parts) > 5 else "N/A"
 
     return {
-        "text": f"{icon} {temp}°C",
+        "text": f"{icon}{temp}",
         "alt": desc,
         "tooltip": (
             f"<b>{city}</b>\n"
             f"{desc}\n"
-            f"Temp: {temp}°C (feels like {feels}°C)\n"
-            f"Humidity: {humidity}%\n"
-            f"Wind: {wind} km/h"
+            f"Temp: {temp} (feels like {feels})\n"
+            f"Humidity: {humidity}\n"
+            f"Wind: {wind}"
         ),
         "class": "weather",
     }

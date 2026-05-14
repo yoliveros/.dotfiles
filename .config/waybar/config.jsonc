@@ -222,7 +222,7 @@
     "custom/weather": {
         "format": "{text}",
         "return-type": "json",
-        "exec": "$HOME/.config/waybar/weather.py",
+        "exec": "$HOME/.config/waybar/weather.py Caracas",
         "interval": 1800,
         "escape": false,
         "tooltip": true
