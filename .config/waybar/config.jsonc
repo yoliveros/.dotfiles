@@ -26,6 +26,7 @@
         // "keyboard-state",
         // "hyprland/language",
         "pulseaudio",
+        "custom/weather",
         "clock",
         "custom/power"
     ],
@@ -125,7 +126,7 @@
           "on-scroll-up": "shift_up",
           "on-scroll-down": "shift_down"
         }
-    },
+      }
     },
     "cpu": {
         "format": "{usage}% ",
@@ -217,6 +218,14 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
         "on-click": "playerctl play-pause"
+    },
+    "custom/weather": {
+        "format": "{text}",
+        "return-type": "json",
+        "exec": "$HOME/.config/waybar/weather.py",
+        "interval": 1800,
+        "escape": false,
+        "tooltip": true
     },
     "custom/power": {
       "format" : "⏻",
