@@ -5,7 +5,7 @@ import sys
 import urllib.request
 
 def get_weather(city: str):
-    url = f"https://wttr.in/?format=%c|%t|%C|%f|%h|%w"
+    url = f"https://wttr.in/{city}?format=%c|%t|%C|%f|%h|%w"
     try:
         with urllib.request.urlopen(url, timeout=10) as r:
             raw = r.read().decode().strip()
