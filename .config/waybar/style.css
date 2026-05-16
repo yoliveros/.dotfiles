@@ -4,7 +4,6 @@
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: "JetBrainsMono Nerd Font Mono", FontAwesome;
     font-size: 14px;
-    letter-spacing: -0.02em;
 }
 
 window#waybar {
@@ -146,7 +145,6 @@ button:hover {
 
 #custom-weather {
   color: @color13;
-  padding: 0.2rem 1rem 0rem 1rem;
 }
 
 #temperature {
