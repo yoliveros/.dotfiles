@@ -62,7 +62,9 @@ dep=(
   "libvirt"
 )
 
-paru -S "${dep[@]}"
+pacman -S "${dep[@]}"
+# not using the AUR for security reasons
+# paru -S "${dep[@]}"
 #
 
 # Simlink dotfiles
