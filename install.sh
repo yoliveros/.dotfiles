@@ -31,7 +31,7 @@ dep=(
   "hyprsysteminfo"
   "hyprcursor"
   "hyprlauncher"
-  "hyprsunset"
+  "hyprsunset" # Setup
   "hyprshot"
   "lazygit"
   "lutris"
@@ -74,7 +74,7 @@ stow .
 # Themenizer service
 systemctl --user daemon-reload
 
-must_init_services=("themenizer.timer")
+must_init_services=("themenizer.timer" "hyprsunset")
 
 for service in "${must_init_services[@]}"; do
     systemctl --user enable "${service}"
