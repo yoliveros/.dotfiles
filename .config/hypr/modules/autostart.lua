@@ -14,6 +14,7 @@ hl.on("hyprland.start", function()
   hl.exec_cmd("wl-paste --type text --watch cliphist store")  -- Stores only text data
   hl.exec_cmd("wl-paste --type image --watch cliphist store") -- Stores only image data
   hl.exec_cmd("hyprpm reload -n")
+  hl.exec_cmd("xrandr --output DP-2 --primary")
 
   -- Wallpaper script
   hl.exec_cmd("~/.local/bin/themenizer")
