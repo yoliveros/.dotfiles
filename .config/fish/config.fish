@@ -39,6 +39,11 @@ fish_add_path "$DOTNET_ROOT" "$DOTNET_ROOT/tools"
 set -gx PNPM_HOME "$HOME/.local/share/pnpm"
 fish_add_path "$PNPM_HOME"
 
+if test -d "$HOME/.adb/platform-tools"
+  set -gx ADB "$HOME/.adb/platform-tools"
+  fish_add_path "$ADB"
+end
+
 starship init fish | source
 zoxide init fish | source
 fnm env --use-on-cd --shell fish | source
