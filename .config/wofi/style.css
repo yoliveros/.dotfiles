@@ -39,11 +39,11 @@ window {
 }
 
 #entry:selected {
-  background-color: @color6;
+  background-color: @color7;
 }
 
 #entry:selected #text {
-  color: @color7;
+  color: @color8;
 }
 
 #img {
