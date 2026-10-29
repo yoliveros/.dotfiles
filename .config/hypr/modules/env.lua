@@ -6,9 +6,7 @@
 
 -- Cursor
 hl.env("HYPRCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_THEME", "Catppuccin-Mocha-Dark")
 hl.env("XCURSOR_SIZE", "24")
-hl.env("XCURSOR_THEME", "Catppuccin-Mocha-Dark")
 
 -- Toolkit Backend
 hl.env("GDK_BACKEND", "wayland,x11,*")

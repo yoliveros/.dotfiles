@@ -2,6 +2,9 @@
 ---- LOOK AND FEEL ----
 -----------------------
 
+-- local colors = dofile(os.getenv("HOME") .. "/.cache/wal/colors-hyprland.lua")
+local colors = require("~/.cache/wal/colors-hyprland.lua")
+
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
   general = {
@@ -11,8 +14,8 @@ hl.config({
     border_size      = 2,
 
     col              = {
-      active_border   = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
-      inactive_border = "rgba(595959aa)",
+      active_border   = { colors = { colors.color10, colors.color12 }, angle = 45 },
+      inactive_border = colors.color8,
     },
 
     -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
