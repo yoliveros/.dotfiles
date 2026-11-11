@@ -9,7 +9,7 @@ fish_config theme choose "catppuccin-mocha"
 fish_add_path ~/bin
 fish_add_path ~/.local/bin
 fish_add_path /usr/local/go/bin
-fish_add_path ~/development/flutter/bin
+fish_add_path ~/develop/flutter/bin
 if test -d ~/adb-fastboot/platform-tools
   fish_add_path ~/adb-fastboot/platform-tools
 end
