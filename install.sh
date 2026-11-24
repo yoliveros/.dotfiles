@@ -56,6 +56,7 @@ dep=(
   "timer-bin"
   "ttf-firacode-nerd"
   "unzip" 
+  "ufw"
   "wofi"
   "zoxide"
   "qemu-full"
